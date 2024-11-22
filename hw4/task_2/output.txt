@@ -1,0 +1,222 @@
+Running program with size 128 and 1 threads
+Real time used: 0.0231 seconds
+Running program with size 256 and 1 threads
+Real time used: 0.1036 seconds
+Running program with size 512 and 1 threads
+Real time used: 1.0713 seconds
+Running program with size 1024 and 1 threads
+Real time used: 10.6635 seconds
+Running program with size 2048 and 1 threads
+Real time used: 106.5397 seconds
+End of program with 1 threads
+
+Running program with size 128 and 2 threads
+Real time used: 0.0156 seconds
+Running program with size 256 and 2 threads
+Real time used: 0.0571 seconds
+Running program with size 512 and 2 threads
+Real time used: 0.5659 seconds
+Running program with size 1024 and 2 threads
+Real time used: 5.4720 seconds
+Running program with size 2048 and 2 threads
+Real time used: 57.2287 seconds
+End of program with 2 threads
+
+Running program with size 128 and 3 threads
+Real time used: 0.0104 seconds
+Running program with size 256 and 3 threads
+Real time used: 0.0448 seconds
+Running program with size 512 and 3 threads
+Real time used: 0.3951 seconds
+Running program with size 1024 and 3 threads
+Real time used: 3.7990 seconds
+Running program with size 2048 and 3 threads
+Real time used: 34.9919 seconds
+End of program with 3 threads
+
+Running program with size 128 and 4 threads
+Real time used: 0.0080 seconds
+Running program with size 256 and 4 threads
+Real time used: 0.0396 seconds
+Running program with size 512 and 4 threads
+Real time used: 0.3010 seconds
+Running program with size 1024 and 4 threads
+Real time used: 2.7973 seconds
+Running program with size 2048 and 4 threads
+Real time used: 25.6486 seconds
+End of program with 4 threads
+
+Running program with size 128 and 5 threads
+Real time used: 0.0066 seconds
+Running program with size 256 and 5 threads
+Real time used: 0.0338 seconds
+Running program with size 512 and 5 threads
+Real time used: 0.2420 seconds
+Running program with size 1024 and 5 threads
+Real time used: 2.2134 seconds
+Running program with size 2048 and 5 threads
+Real time used: 20.5521 seconds
+End of program with 5 threads
+
+Running program with size 128 and 6 threads
+Real time used: 0.0058 seconds
+Running program with size 256 and 6 threads
+Real time used: 0.0318 seconds
+Running program with size 512 and 6 threads
+Real time used: 0.1952 seconds
+Running program with size 1024 and 6 threads
+Real time used: 1.8702 seconds
+Running program with size 2048 and 6 threads
+Real time used: 17.1409 seconds
+End of program with 6 threads
+
+Running program with size 128 and 7 threads
+Real time used: 0.0051 seconds
+Running program with size 256 and 7 threads
+Real time used: 0.0261 seconds
+Running program with size 512 and 7 threads
+Real time used: 0.1747 seconds
+Running program with size 1024 and 7 threads
+Real time used: 1.6126 seconds
+Running program with size 2048 and 7 threads
+Real time used: 15.5968 seconds
+End of program with 7 threads
+
+Running program with size 128 and 8 threads
+Real time used: 0.0045 seconds
+Running program with size 256 and 8 threads
+Real time used: 0.0269 seconds
+Running program with size 512 and 8 threads
+Real time used: 0.1410 seconds
+Running program with size 1024 and 8 threads
+Real time used: 1.4236 seconds
+Running program with size 2048 and 8 threads
+Real time used: 14.0402 seconds
+End of program with 8 threads
+
+End of program
+
+Running program with size 128 and 1 threads
+Real time used: 0.0246 seconds
+Running program with size 256 and 1 threads
+Real time used: 0.1044 seconds
+Running program with size 512 and 1 threads
+Real time used: 1.0854 seconds
+Running program with size 1024 and 1 threads
+Running program with size 128 and 16 threads
+Real time used: 0.0034 seconds
+Running program with size 256 and 16 threads
+Real time used: 0.0202 seconds
+Running program with size 512 and 16 threads
+Real time used: 0.0853 seconds
+Running program with size 1024 and 16 threads
+Real time used: 0.7283 seconds
+Running program with size 2048 and 16 threads
+Real time used: 6.6112 seconds
+End of program with 16 threads
+
+End of program
+
+Running program with size 128 and 16 threads
+Real time used: 0.0033 seconds
+Running program with size 256 and 16 threads
+Real time used: 0.0174 seconds
+Running program with size 512 and 16 threads
+Real time used: 0.0828 seconds
+Running program with size 1024 and 16 threads
+Real time used: 0.7293 seconds
+Running program with size 2048 and 16 threads
+Real time used: 6.7119 seconds
+End of program with 16 threads
+
+Running program with size 128 and 32, threads
+Real time used: 0.0034 seconds
+Running program with size 256 and 32, threads
+Real time used: 0.0106 seconds
+Running program with size 512 and 32, threads
+Real time used: 0.0513 seconds
+Running program with size 1024 and 32, threads
+Real time used: 0.3654 seconds
+Running program with size 2048 and 32, threads
+Real time used: 4.0404 seconds
+End of program with 32, threads
+
+Running program with size 128 and 64, threads
+Real time used: 0.0057 seconds
+Running program with size 256 and 64, threads
+Real time used: 0.0125 seconds
+Running program with size 512 and 64, threads
+Real time used: 0.0460 seconds
+Running program with size 1024 and 64, threads
+Real time used: 0.3762 seconds
+Running program with size 2048 and 64, threads
+Real time used: 3.1401 seconds
+End of program with 64, threads
+
+Running program with size 128 and 80, threads
+Real time used: 0.0307 seconds
+Running program with size 256 and 80, threads
+Real time used: 0.0301 seconds
+Running program with size 512 and 80, threads
+Real time used: 0.0686 seconds
+Running program with size 1024 and 80, threads
+Real time used: 0.4363 seconds
+Running program with size 2048 and 80, threads
+Real time used: 2.9107 seconds
+End of program with 80, threads
+
+Running program with size 128 and 128 threads
+Real time used: 0.0102 seconds
+Running program with size 256 and 128 threads
+Real time used: 0.0191 seconds
+Running program with size 512 and 128 threads
+Real time used: 0.0537 seconds
+Running program with size 1024 and 128 threads
+Real time used: 0.3577 seconds
+Running program with size 2048 and 128 threads
+Real time used: 2.8529 seconds
+End of program with 128 threads
+
+End of program
+
+| 核心数目 | 矩阵维度 128 | 矩阵维度 256 | 矩阵维度 512 | 矩阵维度 1024 | 矩阵维度 2048 |
+|----------|--------------|--------------|--------------|---------------|---------------|
+| 1        | 0.0231       | 0.1036       | 1.0713       | 10.6635       | 106.5397      |
+| 2        | 0.0156       | 0.0571       | 0.5659       | 5.4720        | 57.2287       |
+| 3        | 0.0104       | 0.0448       | 0.3951       | 3.7990        | 34.9919       |
+| 4        | 0.0080       | 0.0396       | 0.3010       | 2.7973        | 25.6486       |
+| 5        | 0.0066       | 0.0338       | 0.2420       | 2.2134        | 20.5521       |
+| 6        | 0.0058       | 0.0318       | 0.1952       | 1.8702        | 17.1409       |
+| 7        | 0.0051       | 0.0261       | 0.1747       | 1.6126        | 15.5968       |
+| 8        | 0.0045       | 0.0269       | 0.1410       | 1.4236        | 14.0402       |
+| 16       | 0.0034       | 0.0202       | 0.0853       | 0.7283        | 6.6112        |
+| 32       | 0.0034       | 0.0106       | 0.0513       | 0.3654        | 4.0404        |
+| 64       | 0.0057       | 0.0125       | 0.0460       | 0.3762        | 3.1401        |
+| 80       | 0.0307       | 0.0301       | 0.0686       | 0.4363        | 2.9107        |
+| 128      | 0.0102       | 0.0191       | 0.0537       | 0.3577        | 2.8529        |
+
+| 核心数目 | 矩阵维度 128 | 矩阵维度 256 | 矩阵维度 512 | 矩阵维度 1024 | 矩阵维度 2048 |
+|----------|--------------|--------------|--------------|---------------|---------------|
+| 1        | 1.00         | 1.00         | 1.00         | 1.00          | 1.00          |
+| 2        | 1.48         | 1.82         | 1.90         | 1.94          | 1.86          |
+| 3        | 2.22         | 2.31         | 2.71         | 2.81          | 3.04          |
+| 4        | 2.91         | 2.62         | 3.56         | 3.81          | 4.15          |
+| 5        | 3.50         | 3.06         | 4.44         | 4.82          | 5.19          |
+| 6        | 4.00         | 4.17         | 5.49         | 5.70          | 6.22          |
+| 7        | 4.53         | 3.94         | 6.13         | 6.61          | 6.83          |
+| 8        | 5.15         | 3.85         | 7.60         | 7.49          | 7.59          |
+| 16       | 6.79         | 5.12         | 12.54        | 14.63         | 16.09         |
+| 32       | 6.79         | 9.76         | 20.93        | 29.14         | 26.36         |
+| 64       | 4.07         | 8.28         | 8.56         | 28.38         | 31.35         |
+| 80       | 0.76         | 3.44         | 15.64        | 25.00         | 36.53         |
+| 128      | 2.28         | 5.43         | 19.88        | 29.83         | 37.29         |
+Running program with size 128 and 1, threads and mode 0
+Running program with size 256 and 1, threads and mode 0
+Running program with size 512 and 1, threads and mode 0
+Running program with size 1024 and 1, threads and mode 0
+Running program with size 128 and 1, threads and mode 0
+Running program with size 256 and 1, threads and mode 0
+Running program with size 512 and 1, threads and mode 0
+Running program with size 1024 and 1, threads and mode 0
+
+

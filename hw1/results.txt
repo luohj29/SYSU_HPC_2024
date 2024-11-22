@@ -1,0 +1,18 @@
+ijk
+1024 1024 1024 
+Python Matrix Multiplying of 1024x1024 and 1024x1024 used time of 327.518531 seconds
+Java Matrix Multiplying of 1024x1024 and 1024x1024 took 3.049000 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 2.853793 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 2.735906 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 4.114278 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 2.828579 seconds
+Results have been saved to results.txt
+ikj
+1024 1024 1024 
+Python Matrix Multiplying of 1024x1024 and 1024x1024 used time of 348.964143 seconds
+Java Matrix Multiplying of 1024x1024 and 1024x1024 took 1.116000 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 0.970858 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 0.501914 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 0.569884 seconds
+C Matrix Multiplying of 1024*1024 and 1024*1024 use time of 0.265389 seconds
+Results have been saved to results.txt

@@ -1,0 +1,138 @@
+Running program with size 128 and 1 threads
+Cpu time used: 0.0068 seconds
+Real time used: 0.0071 seconds
+Running program with size 256 and 1 threads
+Cpu time used: 0.0496 seconds
+Real time used: 0.0498 seconds
+Running program with size 512 and 1 threads
+Cpu time used: 0.3289 seconds
+Real time used: 0.3294 seconds
+Running program with size 1024 and 1 threads
+Cpu time used: 2.5039 seconds
+Real time used: 2.5041 seconds
+Running program with size 2048 and 1 threads
+Cpu time used: 21.2986 seconds
+Real time used: 21.2992 seconds
+End of program with  threads
+
+Running program with size 128 and 2 threads
+Cpu time used: 0.0097 seconds
+Real time used: 0.0050 seconds
+Running program with size 256 and 2 threads
+Cpu time used: 0.0805 seconds
+Real time used: 0.0404 seconds
+Running program with size 512 and 2 threads
+Cpu time used: 0.4167 seconds
+Real time used: 0.2097 seconds
+Running program with size 1024 and 2 threads
+Cpu time used: 3.2554 seconds
+Real time used: 1.6313 seconds
+Running program with size 2048 and 2 threads
+Cpu time used: 24.7684 seconds
+Real time used: 12.3914 seconds
+End of program with  threads
+
+Running program with size 128 and 3 threads
+Cpu time used: 0.0108 seconds
+Real time used: 0.0048 seconds
+Running program with size 256 and 3 threads
+Cpu time used: 0.0607 seconds
+Real time used: 0.0218 seconds
+Running program with size 512 and 3 threads
+Cpu time used: 0.5429 seconds
+Real time used: 0.1825 seconds
+Running program with size 1024 and 3 threads
+Cpu time used: 3.7079 seconds
+Real time used: 1.2449 seconds
+Running program with size 2048 and 3 threads
+Cpu time used: 22.3946 seconds
+Real time used: 7.6367 seconds
+End of program with  threads
+
+Running program with size 128 and 4 threads
+Cpu time used: 0.0078 seconds
+Real time used: 0.0025 seconds
+Running program with size 256 and 4 threads
+Cpu time used: 0.0833 seconds
+Real time used: 0.0213 seconds
+Running program with size 512 and 4 threads
+Cpu time used: 0.4228 seconds
+Real time used: 0.1105 seconds
+Running program with size 1024 and 4 threads
+Cpu time used: 3.6930 seconds
+Real time used: 0.9706 seconds
+Running program with size 2048 and 4 threads
+Cpu time used: 26.0636 seconds
+Real time used: 6.7229 seconds
+End of program with  threads
+
+Running program with size 128 and 5 threads
+Cpu time used: 0.0218 seconds
+Real time used: 0.0055 seconds
+Running program with size 256 and 5 threads
+Cpu time used: 0.1120 seconds
+Real time used: 0.0241 seconds
+Running program with size 512 and 5 threads
+Cpu time used: 0.5034 seconds
+Real time used: 0.1073 seconds
+Running program with size 1024 and 5 threads
+Cpu time used: 3.6744 seconds
+Real time used: 0.7554 seconds
+Running program with size 2048 and 5 threads
+Cpu time used: 31.0521 seconds
+Real time used: 6.3505 seconds
+End of program with  threads
+
+Running program with size 128 and 6 threads
+Cpu time used: 0.0220 seconds
+Real time used: 0.0048 seconds
+Running program with size 256 and 6 threads
+Cpu time used: 0.1160 seconds
+Real time used: 0.0219 seconds
+Running program with size 512 and 6 threads
+Cpu time used: 0.6486 seconds
+Real time used: 0.1152 seconds
+Running program with size 1024 and 6 threads
+Cpu time used: 4.2784 seconds
+Real time used: 0.7427 seconds
+Running program with size 2048 and 6 threads
+Cpu time used: 31.0315 seconds
+Real time used: 5.2654 seconds
+End of program with  threads
+
+Running program with size 128 and 7 threads
+Cpu time used: 0.0210 seconds
+Real time used: 0.0038 seconds
+Running program with size 256 and 7 threads
+Cpu time used: 0.1226 seconds
+Real time used: 0.0198 seconds
+Running program with size 512 and 7 threads
+Cpu time used: 0.5953 seconds
+Real time used: 0.0996 seconds
+Running program with size 1024 and 7 threads
+Cpu time used: 5.0863 seconds
+Real time used: 0.7533 seconds
+Running program with size 2048 and 7 threads
+Cpu time used: 35.3423 seconds
+Real time used: 5.2605 seconds
+End of program with  threads
+
+Running program with size 128 and 8 threads
+Cpu time used: 0.0145 seconds
+Real time used: 0.0032 seconds
+Running program with size 256 and 8 threads
+Cpu time used: 0.1184 seconds
+Real time used: 0.0172 seconds
+Running program with size 512 and 8 threads
+Cpu time used: 0.7890 seconds
+Real time used: 0.1157 seconds
+Running program with size 1024 and 8 threads
+Cpu time used: 5.8158 seconds
+Real time used: 0.7763 seconds
+Running program with size 2048 and 8 threads
+Cpu time used: 36.6737 seconds
+Real time used: 4.7793 seconds
+End of program with  threads
+
+End of program
+

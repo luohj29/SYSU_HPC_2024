@@ -1,0 +1,124 @@
+Running mp_v1 with size 128 and 1 subscribes
+computing time: 0.00820818
+Running mp_v1 with size 256 and 1 subscribes
+computing time: 0.04140653
+Running mp_v1 with size 512 and 1 subscribes
+computing time: 0.31453763
+Running mp_v1 with size 1024 and 1 subscribes
+computing time: 2.59694407
+Running mp_v1 with size 2048 and 1 subscribes
+computing time: 20.09583291
+End of mp_v1 with 1 processes
+
+Running mp_v1 with size 128 and 2 subscribes
+computing time: 0.00927449
+Running mp_v1 with size 256 and 2 subscribes
+computing time: 0.03895435
+Running mp_v1 with size 512 and 2 subscribes
+computing time: 0.31686091
+Running mp_v1 with size 1024 and 2 subscribes
+computing time: 2.49350952
+Running mp_v1 with size 2048 and 2 subscribes
+computing time: 20.66191079
+End of mp_v1 with 2 processes
+
+Running mp_v1 with size 128 and 4 subscribes
+computing time: 0.00237073
+Running mp_v1 with size 256 and 4 subscribes
+computing time: 0.02899293
+Running mp_v1 with size 512 and 4 subscribes
+computing time: 0.15938424
+Running mp_v1 with size 1024 and 4 subscribes
+computing time: 0.81481323
+Running mp_v1 with size 2048 and 4 subscribes
+computing time: 7.55954541
+End of mp_v1 with 4 processes
+
+Running mp_v1 with size 128 and 8 subscribes
+computing time: 0.00221569
+Running mp_v1 with size 256 and 8 subscribes
+computing time: 0.01494774
+Running mp_v1 with size 512 and 8 subscribes
+computing time: 0.08781473
+Running mp_v1 with size 1024 and 8 subscribes
+computing time: 0.61583285
+Running mp_v1 with size 2048 and 8 subscribes
+computing time: 4.69958008
+End of mp_v1 with 8 processes
+
+Running mp_v1 with size 128 and 16 subscribes
+computing time: 0.02853146
+Running mp_v1 with size 256 and 16 subscribes
+computing time: 0.02548847
+Running mp_v1 with size 512 and 16 subscribes
+computing time: 0.05631222
+Running mp_v1 with size 1024 and 16 subscribes
+computing time: 0.54580015
+Running mp_v1 with size 2048 and 16 subscribes
+computing time: 3.34689835
+End of mp_v1 with 16 processes
+
+End of mp_v1
+
+Running mp_v2 with size 128 and 1 subscribes
+computing time: 0.00616894
+Running mp_v2 with size 256 and 1 subscribes
+computing time: 0.04051313
+Running mp_v2 with size 512 and 1 subscribes
+computing time: 0.34513180
+Running mp_v2 with size 1024 and 1 subscribes
+computing time: 2.60994342
+Running mp_v2 with size 2048 and 1 subscribes
+computing time: 21.02779145
+End of mp_v2 with 1 processes
+
+Running mp_v2 with size 128 and 2 subscribes
+computing time: 0.00286619
+Running mp_v2 with size 256 and 2 subscribes
+computing time: 0.02080048
+Running mp_v2 with size 512 and 2 subscribes
+computing time: 0.16300513
+Running mp_v2 with size 1024 and 2 subscribes
+computing time: 1.30153255
+Running mp_v2 with size 2048 and 2 subscribes
+computing time: 10.17184288
+End of mp_v2 with 2 processes
+
+Running mp_v2 with size 128 and 4 subscribes
+computing time: 0.00263057
+Running mp_v2 with size 256 and 4 subscribes
+computing time: 0.02005860
+Running mp_v2 with size 512 and 4 subscribes
+computing time: 0.08136289
+Running mp_v2 with size 1024 and 4 subscribes
+computing time: 0.64149425
+Running mp_v2 with size 2048 and 4 subscribes
+computing time: 5.13883942
+End of mp_v2 with 4 processes
+
+Running mp_v2 with size 128 and 8 subscribes
+computing time: 0.01520692
+Running mp_v2 with size 256 and 8 subscribes
+computing time: 0.01809812
+Running mp_v2 with size 512 and 8 subscribes
+computing time: 0.07090037
+Running mp_v2 with size 1024 and 8 subscribes
+computing time: 0.50399472
+Running mp_v2 with size 2048 and 8 subscribes
+computing time: 4.31928805
+End of mp_v2 with 8 processes
+
+Running mp_v2 with size 128 and 16 subscribes
+computing time: 0.01755418
+Running mp_v2 with size 256 and 16 subscribes
+computing time: 0.01275794
+Running mp_v2 with size 512 and 16 subscribes
+computing time: 0.06158952
+Running mp_v2 with size 1024 and 16 subscribes
+computing time: 0.49069076
+Running mp_v2 with size 2048 and 16 subscribes
+computing time: 3.49231377
+End of mp_v2 with 16 processes
+
+End of mp_v2
+
