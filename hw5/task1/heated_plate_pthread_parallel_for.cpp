@@ -6,11 +6,10 @@
 #include <time.h>
 #include <sys/time.h>
 extern int parallel_for(struct index *index_in, void *(*functor)(void*), void *arg , int num_threads);
+pthread_mutex_t shared_var;
 
 int main ( int argc, char *argv[] );
-
-PthreadPool threadspool;
-
+int M, N;
 
 /******************************************************************************/
 
@@ -110,31 +109,47 @@ int main ( int argc, char *argv[] )
     Local, double W[M][N], the solution computed at the latest iteration.
 */
 {
-  struct timeval start_time;
-  struct timeval end_time;
-  double diff;
-  double epsilon = 0.001;
-  int i;
-  int iterations;
-  int iterations_print;
-  int j;
-  double mean;
-  double my_diff;
-  double u[M][N];
-  double w[M][N];
-  double wtime;
-  
+  if(argc!=4){
+      printf("args num should be 4\n");
+      return 0;
+  }
+  M = atoi(argv[1]);
+  N = atoi(argv[2]);
+int threads_num = atoi(argv[3]);
+struct timeval start_time;
+struct timeval end_time;
+double diff;
+double epsilon = 0.001;
+int i;
+int iterations;
+int iterations_print;
+int j;
+double mean;
+double my_diff;
+// 动态分配二维数组 u 和 w
+double **u = new double *[M]; // 为行分配内存
+double **w = new double *[M]; // 为行分配内存
 
-  printf ( "\n" );
-  printf ( "HEATED_PLATE_OPENMP\n" );
-  printf ( "  C/OpenMP version\n" );
-  printf ( "  A program to solve for the steady state temperature distribution\n" );
-  printf ( "  over a rectangular plate.\n" );
-  printf ( "\n" );
-  printf ( "  Spatial grid of %d by %d points.\n", M, N );
-  printf ( "  The iteration will be repeated until the change is <= %e\n", epsilon ); 
-  printf ( "  Number of processors available = %d\n", omp_get_num_procs ( ) );
-  printf ( "  Number of threads =              %d\n", omp_get_max_threads () );
+for (int i = 0; i < M; ++i)
+{
+    u[i] = new double[N]; // 为每一行分配列内存
+    w[i] = new double[N]; // 为每一行分配列内存
+    }
+    double wtime;
+    PthreadPool threadspool;
+    threadspool.Init(threads_num);
+ 
+
+//   printf ( "\n" );
+//   printf ( "HEATED_PLATE_OPENMP\n" );
+//   printf ( "  C/OpenMP version\n" );
+//   printf ( "  A program to solve for the steady state temperature distribution\n" );
+//   printf ( "  over a rectangular plate.\n" );
+//   printf ( "\n" );
+//   printf ( "  Spatial grid of %d by %d points.\n", M, N );
+//   printf ( "  The iteration will be repeated until the change is <= %e\n", epsilon ); 
+//   printf ( "  Number of processors available = %d\n", omp_get_num_procs ( ) );
+//   printf ( "  Number of threads =              %d\n", threads_num );
 /*
   Set the boundary values, which don't change. 
 */
@@ -184,124 +199,60 @@ int main ( int argc, char *argv[] )
   So we interrupt the parallel region, set MEAN, and go back in.
 */
   mean = mean / ( double ) ( 2 * M + 2 * N - 4 );
-  printf ( "\n" );
-  printf ( "  MEAN = %f\n", mean );
+//   printf ( "\n" );
+//   printf ( "  MEAN = %f\n", mean );
 /* 
   Initialize the interior solution to the mean value.
 */
-
-// #pragma omp parallel shared ( mean, w ) private ( i, j )
-//   {
-    int num_threads = omp_get_max_threads ( );
-    struct index index_diy = {1, M - 1, 1, 1, N - 1, 1};
-    struct value2matrix value2matrix_diy = {mean,&w};
+  int num_threads = 15;
+  struct index index_diy = {1, M - 1, 1, 1, N - 1, 1};
+  struct value2matrix value2matrix_diy = {mean,w};
     // printf("%p\n", w);
     // printf("%.4lf\n", w[50][50]);\
     threadspool.Init(16);
-    parallel_for(&index_diy, value_map_matrix, (void *)&value2matrix_diy, num_threads);
+  parallel_for(&threadspool, &index_diy, value_map_matrix, (void *)&value2matrix_diy, num_threads);
+//   iterate until the  new solution W differs from the old solution U
+//   by no more than EPSILON.
 
-// #pragma omp for //to replace?
-//     for ( i = 1; i < M - 1; i++ )
-//     {
-//       for ( j = 1; j < N - 1; j++ )
-//       {
-//         w[i][j] = mean;
-//       }
-//     }
-//   }
-/*
-  iterate until the  new solution W differs from the old solution U
-  by no more than EPSILON.
-*/
   iterations = 0;
   iterations_print = 1;
-  printf ( "\n" );
-  printf ( " Iteration  Change\n" );
-  printf ( "\n" );
+//   printf ( "\n" );
+//   printf ( " Iteration  Change\n" );
+//   printf ( "\n" );
   wtime = omp_get_wtime ( );
 
   diff = epsilon;
 
   while ( epsilon <= diff )
   {
-
-/*
-  Save the old solution in U.
-*/
     struct index index_diy2 = {0, M , 1, 0, N , 1};
-    struct matrix2matrix matrix2matrix_diy = {&w, &u};
-    // gettimeofday(&start_time, NULL);
-    printf("%p\n", matrix_map_matrix);
-    parallel_for(&index_diy2, matrix_map_matrix, (void *)&matrix2matrix_diy, num_threads);
-    for(int i = 495; i < 500; i++){
-        for (int j = 495; j < 500; j++)
-        {
-            printf("%.4lf", u[i][j]);
-        }
-        printf("\n");
-    }
-# pragma omp parallel shared ( u, w ) private ( i, j )
-    {
-// # pragma omp for //to replace
-//       for ( i = 0; i < M; i++ ) 
-//       {
-//         for ( j = 0; j < N; j++ )
-//         {
-//           u[i][j] = w[i][j];
-//         }
-//       }
-    // gettimeofday(&end_time, NULL);
-    // double time_use=(end_time.tv_sec-start_time.tv_sec)*1000000+(end_time.tv_usec-start_time.tv_usec);
-    // time_use /= 1000000;
-    // printf("Real time used: %.4f seconds\n", time_use);
+    struct matrix2matrix matrix2matrix_diy = {w, u};
+
+    parallel_for(&threadspool, &index_diy2, matrix_map_matrix, (void *)&matrix2matrix_diy, num_threads);
+
 /*
   Determine the new estimate of the solution at the interior points.
   The new solution W is the average of north, south, east and west neighbors.
 */
-    matrix2matrix_diy.dst = &w, matrix2matrix_diy.src = &u;
-    // parallel_for(&index_diy, matrix_funct_matrix, (void *)&matrix2matrix_diy, num_threads);
-# pragma omp for //to replace
-        for ( i = 1; i < M - 1; i++ )
-        {
-        for ( j = 1; j < N - 1; j++ )
-        {
-            w[i][j] = ( u[i-1][j] + u[i+1][j] + u[i][j-1] + u[i][j+1] ) / 4.0;
-        }
-        }
-    }
-/*
-  C and C++ cannot compute a maximum as a reduction operation.
+    matrix2matrix_diy.dst = w, matrix2matrix_diy.src = u;
+    struct index index_diy3 = {1, M-1 , 1, 1, N-1 , 1};
+    parallel_for(&threadspool, &index_diy3, matrix_funct_matrix, (void *)&matrix2matrix_diy, num_threads);
+    // printf("%.4lf ,%4lf\n", u[5][5], w[498][498]);
+    // printf("%p %p\n", w, u);
+    //   C and C++ cannot compute a maximum as a reduction operation.
 
-  Therefore, we define a private variable MY_DIFF for each thread.
-  Once they have all computed their values, we use a CRITICAL section
-  to update DIFF.
-*/
+    //   Therefore, we define a private variable MY_DIFF for each thread.
+    //   Once they have all computed their values, we use a CRITICAL section
+    //   to update DIFF.
+
+    //diff represents the biggest differnce between u and w
+    //using diy parallel for to find the max difference, inner function use mutex lock for critical write
     diff = 0.0;
-# pragma omp parallel shared ( diff, u, w ) private ( i, j, my_diff )
-    {
-      my_diff = 0.0;
-    struct matrix_matrix_diff diff_diy = {&w, &u, &my_diff};
-    // parallel_for(&index_diy, find_matrixs_max_diff, (void *)&diff_diy, num_threads);
-# pragma omp for //to replace
-      for ( i = 1; i < M - 1; i++ )
-      {
-        for ( j = 1; j < N - 1; j++ )
-        {
-          if ( my_diff < fabs ( w[i][j] - u[i][j] ) )
-          {
-            my_diff = fabs ( w[i][j] - u[i][j] );
-          }
-        }
-      }
-# pragma omp critical
-      {
-        if ( diff < my_diff )
-        {
-          diff = my_diff;
-        }
-      }
-    }
-
+    struct matrix_matrix_diff diff_diy = {w, u, &diff};
+    // printf("%.4lf ,%4lf\n", u[5][5], w[498][498]);
+    pthread_mutex_init(&shared_var, NULL);
+    parallel_for(&threadspool, &index_diy3, find_matrixs_max_diff, (void *)&diff_diy, num_threads);
+    // printf("%p %p\n", w, u);
     iterations++;
     if ( iterations == iterations_print )
     {
@@ -311,27 +262,33 @@ int main ( int argc, char *argv[] )
   } 
   wtime = omp_get_wtime ( ) - wtime;
 
-  printf ( "\n" );
-  printf ( "  %8d  %f\n", iterations, diff );
-  printf ( "\n" );
-  printf ( "  Error tolerance achieved.\n" );
-  printf ( "  Wallclock time = %f\n", wtime );
+//   printf ( "\n" );
+//   printf ( "  %8d  %f\n", iterations, diff );
+//   printf ( "\n" );
+//   printf ( "  Error tolerance achieved.\n" );
+  printf ( "Wallclock time = %f\n", wtime );
 /*
   Terminate.
 */
-  printf ( "\n" );
-  printf ( "HEATED_PLATE_OPENMP:\n" );
-  printf ( "  Normal end of execution.\n" );
-  for (int i = 495;i<M;i++)
-  {
-      for (int j = 495;j<N;j++){
-          printf("%.4lf ", w[i][j]);
-      }
-      printf("\n");
-  }
+//   printf ( "\n" );
+//   printf ( "HEATED_PLATE_OPENMP:\n" );
+//   printf ( "  Normal end of execution.\n" );
+//   for (int i = M-5;i<M;i++)
+//   {
+//       for (int j = N-5;j<N;j++){
+//           printf("%.4lf ", w[i][j]);
+//       }
+//       printf("\n");
+//   }
   threadspool.Destory();
+    for (int i = 0; i < M; ++i) {
+        delete[] u[i];  // 释放每一行的内存
+        delete[] w[i];  // 释放每一行的内存
+    }
+  delete[] u;
+  delete[] w;
   return 0;
-
-# undef M
+      // 释放内存
+#undef M
 # undef N
 }

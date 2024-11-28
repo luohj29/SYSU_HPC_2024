@@ -5,7 +5,7 @@
 */
 
 #include "parallel.h"
-
+extern pthread_mutex_t shared_var;
 PthreadPool::PthreadPool()
 {
     thread_num = 0;
@@ -23,6 +23,8 @@ PthreadPool::~PthreadPool()
 
 int PthreadPool::Init(unsigned int num)
 {
+    unfinished_task = 0;
+    pthread_cond_init(&(this->cond), NULL);
     // 初始化互斥锁和条件变量
     do
     {
@@ -82,42 +84,48 @@ int PthreadPool::Destory(PthreadPool_Shutdown flag)
 
 int PthreadPool::AddTask(void* (*function)(void *), void *argument)
 {
-    printf("In AddTask: %p\n", function);    
+ 
     if (thread_num == 0 || function == NULL)
         return Pthreadpool_invalid;
     /* 必须先取得互斥锁所有权 */
-    if (pthread_mutex_lock(&lock) != 0)
+
+    if (pthread_mutex_lock(&lock) != 0){
+        // printf("In AddTask: %p\n", function);
         return Pthreadpool_lock_failure;
+    }
+
 
     // 检查是否关闭了线程池
     if (shutdown)
     {
         return Pthreadpool_shutdown;
     }
-
+    
     // 新加入
     Pthreadpool_Runable newRunable;
     newRunable.function = function;
     newRunable.argument = argument;
     // 加入队列
+
     thread_queue.push(newRunable);
-    
+    this->waiting_num++;
+    this->unfinished_task++;
+ 
     // 发出signal
     if (pthread_cond_signal(&notify) != 0)
         return Pthreadpool_lock_failure;
     pthread_mutex_unlock(&lock);
+  
     return 0;
 }
 
 void PthreadPool::pool_wait() {
-    pthread_mutex_lock(&this->lock);
-    while (!this->shutdown || this->waiting_num > 0) { // 等待所有任务完成
-        printf("waiting for threads\n");
-        pthread_cond_wait(&this->notify, &this->lock);
+    pthread_mutex_lock(&lock);    
+    while(this->unfinished_task!=0){
+        pthread_cond_wait(&this->cond, &this->lock);
     }
-    pthread_mutex_unlock(&this->lock);
+    pthread_mutex_unlock(&lock);
 }
-
 
 // 线程运行函数
 void *PthreadPool::threadpool_thread(void *threadpool)
@@ -155,8 +163,16 @@ void *PthreadPool::threadpool_thread(void *threadpool)
         pthread_mutex_unlock(&(pool->lock));
 
         // 开始运行任务
-        printf("In working threads: %p\n", Runable.function);
+        
         (*(Runable.function))(Runable.argument);
+
+        pthread_mutex_lock(&(pool->lock));
+        pool->unfinished_task--;
+        if(pool->unfinished_task == 0){
+            pthread_cond_signal(&pool->cond);
+        }
+        pthread_mutex_unlock(&(pool->lock));
+        // printf("In working threads: %p\n", Runable.function);
         // 结束，回到等待
     }
     // 更新正在运行的线程数
@@ -188,23 +204,25 @@ void *value_map_matrix(void *args)
     {  
         for (j = col_start; j < col_end;j+=col_increment)
         {
-            (*(argues->W))[i][j] = argues->value;
+            (argues->w)[i][j] = argues->value;
         }
     }
+    // printf("%p %.4lf\n", argues->W, argues->value);
     return NULL;
 }
 
 void *matrix_map_matrix(void *args){ //a function to map value to a matrix
-    struct index_in *index_in = (struct index_in *)args;
-    struct matrix2matrix *argues = (struct matrix2matrix *)index_in->args;
+    struct index_in *index = (struct index_in *)args;
+    struct matrix2matrix *argues = (struct matrix2matrix *)index->args;
     int i, j;
-    int row_increment = index_in->index_diy -> row_increment;
-    int col_increment = index_in->index_diy->col_increment;
-    int row_start = index_in->index_diy->row_start;
-    int col_start = index_in->index_diy->col_start;
-    int row_end = index_in->index_diy->row_end;
-    int col_end = index_in->index_diy->col_end;
-    // printf("%.4lf", argues->W[50][50]);
+    int row_increment = index->index_diy->row_increment;
+    int col_increment = index->index_diy->col_increment;
+    int row_start = index->index_diy->row_start;
+    int col_start = index->index_diy->col_start;
+    int row_end = index->index_diy->row_end;
+    int col_end = index->index_diy->col_end;
+    double **dst = argues->dst;
+    double **src = argues->src;
     // printf("%d, %d, %d\n", index_in->index_diy->row_start, index_in->index_diy->row_end, index_in->index_diy->row_increment);
     // printf("%p %.4lf\n", argues->W, argues->value);
 
@@ -212,7 +230,7 @@ void *matrix_map_matrix(void *args){ //a function to map value to a matrix
     {  
         for (j = col_start; j < col_end;j+=col_increment)
         {
-            (*(argues->dst))[i][j] = (*(argues->src))[i][j] ;
+            dst[i][j] = src[i][j] ;
         }
     }
     return NULL;
@@ -232,12 +250,13 @@ void *matrix_funct_matrix(void *args)
     // printf("%.4lf", argues->W[50][50]);
     // printf("%d, %d, %d\n", index_in->index_diy->col_start, index_in->index_diy->col_end, index_in->index_diy->col_increment);
     // printf("%p %.4lf\n", argues->W, argues->value);
-
+    double **dst = argues->dst;
+    double **src = argues->src;
     for (i = row_start; i < row_end; i += row_increment)
     {  
         for (j = col_start; j < col_end;j+=col_increment)
         {
-            (*(argues->dst))[i][j] = ((*(argues->src))[i-1][j] + (*(argues->src))[i+1][j] + (*(argues->src))[i][j-1] + (*(argues->src))[i][j+1])/4.0;
+            dst[i][j] = (src[i-1][j] + src[i+1][j] + src[i][j-1] + src[i][j+1])/4.0;
         }
     }
     return NULL;
@@ -253,22 +272,35 @@ void *find_matrixs_max_diff(void *args){
     int col_start = index_in->index_diy->col_start;
     int row_end = index_in->index_diy->row_end;
     int col_end = index_in->index_diy->col_end;
-    // printf("%.4lf", argues->W[50][50]);
+    double **m1 =  argues->m1;
+    double *diff = argues->max_diff;
+    double **m2 = argues->m2;
+    // printf("%p ,%p\n", m1, m2);
+    // printf("%.4lf, %.4lf\n", (*m1)[498][498],(*m2)[498][498]);
     // printf("%d, %d, %d\n", index_in->index_diy->col_start, index_in->index_diy->col_end, index_in->index_diy->col_increment);
     // printf("%p %.4lf\n", argues->W, argues->value);
-
+    double local_max;
     for (i = row_start; i < row_end; i += row_increment)
     {  
         for (j = col_start; j < col_end;j+=col_increment)
         {
-            if(fabs((*(argues->m1))[i][j]-(*(argues->m2))[i+1][j]) < *(argues->max_diff)){
-                *(argues->max_diff) = fabs((*(argues->m1))[i][j] - (*(argues->m2))[i + 1][j]);
-            }
+            double local = fabs(m1[i][j] - m2[i][j]);
+            local_max = std::max(local_max, local);
         }
     }
+    
+    pthread_mutex_lock(&shared_var); //
+    // printf("local_max: %.4lf", local_max);
+    if (local_max > *diff)
+    {
+        *diff = local_max;
+        
+    }
+    pthread_mutex_unlock(&shared_var);
     return NULL;  
 }
-int parallel_for(struct index *index_in, void *(*functor)(void*), void *arg , int num_threads){
+
+int parallel_for(PthreadPool *threadspool,  struct index *index_in, void *(*functor)(void*), void *arg , int num_threads){
     struct timeval start_time;
     struct timeval end_time;
     
@@ -277,7 +309,7 @@ int parallel_for(struct index *index_in, void *(*functor)(void*), void *arg , in
     int col_start_i = index_in->col_start;
     int col_end_i = index_in->col_end;
     int avg = (index_in->row_end - row_start_i) / num_threads;
-    printf("In parallel for: %p\n", functor);
+    // printf("In parallel for: %p\n", functor);
     gettimeofday(&start_time, NULL);
     struct index_in index_in_set[num_threads];
     struct index index_set[num_threads];
@@ -296,12 +328,15 @@ int parallel_for(struct index *index_in, void *(*functor)(void*), void *arg , in
         index_set[i].col_increment = 1;
         index_in_set[i].index_diy = &index_set[i];
         index_in_set[i].args = arg;
-
-        threadspool.AddTask(functor, (void*) &index_in_set[i]);  //加入到工作任务队列
+        // functor((void *)&index_in_set[i]);
+        if(threadspool->AddTask(functor, (void *)&index_in_set[i])==Pthreadpool_lock_failure){
+            printf("lock error\n");
+        }
+        // threadspool.AddTask(functor, (void*) &index_in_set[i]);  //加入到工作任务队列
 
         row_start_i = row_end_i;
     }
-    threadspool.pool_wait(); // wait all the batch to finish!
+    threadspool->pool_wait(); // wait all the batch to finish!
 
     gettimeofday(&end_time, NULL);
 

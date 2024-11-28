@@ -1,0 +1,835 @@
+desc: --time-unit=B --stacks=yes
+cmd: ./main 500 500 8
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=7378896
+mem_heap_B=4064712
+mem_heap_extra_B=8008
+mem_stacks_B=880
+heap_tree=detailed
+n4: 4064712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1992000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 1992000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 8008 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=1172915896
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8952
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=3525733368
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8968
+heap_tree=detailed
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=5071329096
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8120
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=7076713352
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8952
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=8459678600
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8952
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=10361255848
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8784
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=12850731688
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8728
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=15340207528
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8648
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=17829683368
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=20319159208
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8440
+heap_tree=detailed
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=22808635048
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8648
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=25298110888
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8552
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=27787586728
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8104
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=30277062568
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=31521800488
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9144
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=33700091848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8728
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=35518467592
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8424
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=37336843336
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8600
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=39155219080
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9000
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=40973594824
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8152
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=42791970568
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8200
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=44610346312
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8088
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=46428722056
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8776
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=48247097800
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8872
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=50065473544
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8920
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=51883849288
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8328
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=53702225032
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8808
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=55520600776
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8792
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=57812753896
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7928
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=60578684392
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8776
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=63344614888
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9000
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=66110545384
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8160
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=68876475880
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8920
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=71642406376
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8648
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=73025371624
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8824
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=74408336872
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7896
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=75791302120
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8440
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=77174267368
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8664
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=78557232616
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8680
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=79940197864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8904
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=81323163112
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8320
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=82706128360
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8584
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=84089093608
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8344
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=85472058856
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7880
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=86855024104
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8968
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=88237989352
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8888
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=89620954600
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8968
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=91003919848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8872
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=92169456848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8576
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=93334993848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8568
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=94500530848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8704
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=95666067848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8376
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=96831604848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8144
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=97997141848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8552
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=99162678848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8544
+heap_tree=detailed
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=100328215848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8456
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=101493752848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8336
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=102659289848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=103824826848
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=9048
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=104990363848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8904
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=106155900848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8224
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=107321437848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8776
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=108486974848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8720
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=109652511848
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8096
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=110818048848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9168
+heap_tree=detailed
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=111983585848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8680
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=113149122848
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8328
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=114314659848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9016
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=115480196848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8096
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=116645733848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8552
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=117811270848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8528
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=118976807848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7880
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=120142344848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8560
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=121307881848
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8360
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=122473418864
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=9384
+heap_tree=detailed
+n4: 4095136 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 22432 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=123638955864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8824
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=124804492864
+mem_heap_B=4095136
+mem_heap_extra_B=8328
+mem_stacks_B=8792
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=125970029864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8728
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=127135566864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8352
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=128301103864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7912
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=129466640864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8624
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=130632177864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8472
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=131797714864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=7424
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=132963251864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8712
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=134128788864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=9024
+heap_tree=detailed
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=87
+#-----------
+time=135294325864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=136459862864
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=8768
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=137535169352
+mem_heap_B=4094624
+mem_heap_extra_B=8320
+mem_stacks_B=11864
+heap_tree=peak
+n4: 4094624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 2000000 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 21920 in 11 places, all below massif's threshold (1.00%)

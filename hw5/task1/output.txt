@@ -1,0 +1,91 @@
+Running program with size 128 and 1, threads
+Wallclock time = 1.514982
+Running program with size 256 and 1, threads
+Wallclock time = 9.453089
+Running program with size 512 and 1, threads
+Wallclock time = 66.731220
+Running program with size 1024 and 1, threads
+Wallclock time = 225.898371
+Running program with size 2048 and 1, threads
+Wallclock time = 703.321185
+Running program with size 4096 and 1, threads
+Wallclock time = 2930.082439
+Running program with size 8192 and 1, threads
+
+
+
+
+Running program with size 128 and 16, threads
+Wallclock time = 1.884200
+Running program with size 256 and 16, threads
+Wallclock time = 8.782962
+Running program with size 512 and 16, threads
+Wallclock time = 27.455385
+Running program with size 1024 and 16, threads
+Wallclock time = 74.984984
+Running program with size 2048 and 16, threads
+Wallclock time = 246.510050
+Running program with size 4096 and 16, threads
+Wallclock time = 822.905625
+Running program with size 8192 and 16, threads
+Wallclock time = 2230.558220
+End of program with 16, threads
+
+Running program with size 128 and 8, threads
+Wallclock time = 0.891577
+Running program with size 256 and 8, threads
+Wallclock time = 8.035092
+Running program with size 512 and 8, threads
+Wallclock time = 15.068684
+Running program with size 1024 and 8, threads
+Wallclock time = 59.636986
+Running program with size 2048 and 8, threads
+Wallclock time = 214.609258
+Running program with size 4096 and 8, threads
+Wallclock time = 791.794789
+Running program with size 8192 and 8, threads
+Wallclock time = 2950.624220
+End of program with 8, threads
+
+Running program with size 128 and 4, threads
+Wallclock time = 0.795760
+Running program with size 256 and 4, threads
+Wallclock time = 4.473302
+Running program with size 512 and 4, threads
+Wallclock time = 21.921012
+Running program with size 1024 and 4, threads
+Wallclock time = 96.825203
+Running program with size 2048 and 4, threads
+Wallclock time = 347.250282
+Running program with size 4096 and 4, threads
+Wallclock time = 1391.575813
+Running program with size 8192 and 4, threads
+
+
+Running program with size 128 and 2, threads
+Wallclock time = 0.979901
+Running program with size 256 and 2, threads
+Wallclock time = 6.826970
+Running program with size 512 and 2, threads
+Wallclock time = 42.615858
+Running program with size 1024 and 2, threads
+Wallclock time = 174.309762
+Running program with size 2048 and 2, threads
+Wallclock time = 666.447201
+Running program with size 4096 and 2, threads
+Wallclock time = 2654.926696
+Running program with size 8192 and 2, threads
+Wallclock time = 10927.505105
+End of program with 2, threads
+
+Running program with size 128 and 1 threads
+Wallclock time = 1.472873
+Running program with size 256 and 1 threads
+Wallclock time = 11.536146
+Running program with size 512 and 1 threads
+Wallclock time = 78.093475
+Running program with size 1024 and 1 threads
+Wallclock time = 322.881929
+Running program with size 2048 and 1 threads
+Wallclock time = 1273.401172
+Running program with size 4096 and 1 threads

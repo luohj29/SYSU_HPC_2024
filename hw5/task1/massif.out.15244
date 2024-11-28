@@ -1,0 +1,735 @@
+desc: --time-unit=B --stacks=yes
+cmd: ./main 256 256 8
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=4408648
+mem_heap_B=1133712
+mem_heap_extra_B=4288
+mem_stacks_B=5672
+heap_tree=detailed
+n4: 1133712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 12432 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=387820000
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8976
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=829786256
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8320
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1189659648
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8432
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1639433016
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8568
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1913391104
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8352
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2333460160
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8176
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2752352608
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8912
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2975761824
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8928
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=3366728152
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8136
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3914253632
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8416
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4283224640
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8448
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4652195648
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8208
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=5021166656
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8560
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=5390137664
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8864
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5759108672
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=9168
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=6203393848
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=9176
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=6538507608
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8616
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6789843120
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=9344
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=7124956880
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8816
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=7543849096
+mem_heap_B=1139808
+mem_heap_extra_B=4424
+mem_stacks_B=8560
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=7795184568
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8616
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=8130298328
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8952
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=8465412088
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=7672
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=8800525848
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8440
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=9135639616
+mem_heap_B=1139808
+mem_heap_extra_B=4424
+mem_stacks_B=8600
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=9470753376
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8176
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=9805867136
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8720
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=10224759336
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8584
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=10809203240
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8712
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=11101425192
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8424
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=11393647184
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8912
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=11978091088
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8576
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=12562534992
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8672
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=12854757032
+mem_heap_B=1139808
+mem_heap_extra_B=4424
+mem_stacks_B=8480
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=13293089968
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8816
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=13877533872
+mem_heap_B=1139808
+mem_heap_extra_B=4424
+mem_stacks_B=9000
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=14169755824
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8336
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=14461977776
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8800
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=14754199728
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8704
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=15046421680
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8336
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=15338643632
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8352
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=15630865584
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8576
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=15923087536
+mem_heap_B=1139808
+mem_heap_extra_B=4424
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=16215309488
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8720
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=16507531440
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8432
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=16799753480
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8568
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=17238086440
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=9080
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=17530308392
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=7656
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=17753717608
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=7912
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=17977126824
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8472
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=18200536040
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8600
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=18423945256
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8936
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=18647354472
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8376
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=18870763688
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=7656
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=19094172904
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8920
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=19317582120
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8648
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=19540991336
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8424
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=19764400552
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8776
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=19987809768
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8552
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=20211218984
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8616
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=20434628200
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8584
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=20658037416
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8696
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=20881446632
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8680
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=21104855848
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=9000
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=21328265064
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8152
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=21551674280
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8168
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=21775083496
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8104
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=21998492712
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8888
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=22221901928
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8664
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=22445311144
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8952
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=22668720360
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=8952
+heap_tree=detailed
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=22765442168
+mem_heap_B=1139296
+mem_heap_extra_B=4416
+mem_stacks_B=12264
+heap_tree=peak
+n4: 1139296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x10A728: main (heated_plate_pthread_parallel_for.cpp:135)
+ n0: 524288 0x10A778: main (heated_plate_pthread_parallel_for.cpp:136)
+ n1: 72704 0x4902939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x3: ???
+       n1: 72704 0x1FFEFFFB3A: ???
+        n1: 72704 0x1FFEFFFB41: ???
+         n1: 72704 0x1FFEFFFB45: ???
+          n0: 72704 0x1FFEFFFB49: ???
+ n0: 18016 in 11 places, all below massif's threshold (1.00%)

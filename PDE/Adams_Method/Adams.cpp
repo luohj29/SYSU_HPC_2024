@@ -19,6 +19,17 @@ double funct(double x)
 {
     return -5 * x;
 }
+void test(std::vector<double> &x,std::vector<double> &f,std::vector<double> &u, int start, int end){
+// u(n+1) = u(n) +h/2*(5f(n)-6f(n-1)+4f(n-2)-f(n-3))
+    for (int i = start-1; i<end; i++){
+        u[i + 1] = u[i + 1] = 2 * u[i] -u[i]+ H / 4 * (55 * f[i] - 59 * f[i - 1] + 37 * f[i - 2] - 9 * f[i - 3]);
+        f[i + 1] = u[i + 1];
+        u[i + 1] = u[i] + H / 720 * (251 * f[i + 1] + 646 * f[i] - 264 * f[i - 1] + 106 * f[i - 2] - 19 * f[i - 3]);
+        f[i + 1] = -5 * u[i + 1];
+        x[i + 1] = x[i] + H;
+    }
+    return ;
+}
 
 void Adams_Bashforth_3Order(std::vector<double> &x,std::vector<double> &f,std::vector<double> &u, int start, int end){
 // u(n+1) = u(n) +h/2*(5f(n)-6f(n-1)+4f(n-2)-f(n-3))
