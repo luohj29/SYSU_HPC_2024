@@ -55,8 +55,7 @@ public:
     bool is_queue_empty();
     int thread_num;                                                  // 线程数量
     int running_num;                                                 // 正在运行的线程数
-    int waiting_num;                                                 // 队列中等待的数目
-    int unfinished_task;
+    int unfinished_task;                                             // 等待运行完成的任务的数量，若工作线程处理完一个任务，该量-1，若该量为0， cond条件变量被唤醒。
     pthread_cond_t cond;                                             // 标记一批任务是否完成
     int Init(unsigned int num);                                       // 初始化线程池
     int AddTask(void* (*function)(void *), void *argument = nullptr); // 加入任务

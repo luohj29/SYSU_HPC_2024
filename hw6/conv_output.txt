@@ -1,0 +1,263 @@
+Running convMain with size 512 and 1 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 17 gridy:17
+Memory allocation and padding time: 7.70774 ms
+Kernel data copy time: 0.027936 ms
+Convolution computation time: 5.17018 ms
+Result copy back to host time: 0.176832 ms
+Custom Kernel Time for sliding conv: 13.314368 ms
+
+GPU memory allocation and copy time: 0.557792 ms
+GPU im2col_gpu time: 0.032256 ms
+GPU cublas handle malloc time: 1038.856323 ms
+GPU cublasSgemm time: 0.637856 ms
+GPU result copy back to host time: 0.184832 ms
+Total CPU time: 1040 ms
+Custom Kernel Time for img2colv2 conv: 1041.133179 ms
+Custom Kernel Time for cudnn conv: 30.268864 ms
+Running convMain with size 1024 and 1 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 33 gridy:33
+Memory allocation and padding time: 30.0966 ms
+Kernel data copy time: 0.035616 ms
+Convolution computation time: 5.12512 ms
+Result copy back to host time: 0.585696 ms
+Custom Kernel Time for sliding conv: 36.377918 ms
+
+GPU memory allocation and copy time: 1.574912 ms
+GPU im2col_gpu time: 0.125824 ms
+GPU cublas handle malloc time: 1024.304077 ms
+GPU cublasSgemm time: 0.788480 ms
+GPU result copy back to host time: 0.576832 ms
+Total CPU time: 1027 ms
+Custom Kernel Time for img2colv2 conv: 1029.992065 ms
+Custom Kernel Time for cudnn conv: 31.404320 ms
+Running convMain with size 2048 and 1 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 65 gridy:65
+Memory allocation and padding time: 118.347 ms
+Kernel data copy time: 0.037728 ms
+Convolution computation time: 5.22851 ms
+Result copy back to host time: 1.81402 ms
+Custom Kernel Time for sliding conv: 126.305054 ms
+
+GPU memory allocation and copy time: 5.198496 ms
+GPU im2col_gpu time: 0.577504 ms
+GPU cublas handle malloc time: 1006.047363 ms
+GPU cublasSgemm time: 1.170432 ms
+GPU result copy back to host time: 1.915776 ms
+Total CPU time: 1015 ms
+Custom Kernel Time for img2colv2 conv: 1017.849487 ms
+Custom Kernel Time for cudnn conv: 42.174335 ms
+Running convMain with size 4096 and 1 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 129 gridy:129
+Memory allocation and padding time: 473.737 ms
+Kernel data copy time: 0.041344 ms
+Convolution computation time: 5.75478 ms
+Result copy back to host time: 7.0841 ms
+Custom Kernel Time for sliding conv: 488.361298 ms
+
+GPU memory allocation and copy time: 19.755009 ms
+GPU im2col_gpu time: 2.284608 ms
+GPU cublas handle malloc time: 1002.255371 ms
+GPU cublasSgemm time: 2.720768 ms
+GPU result copy back to host time: 7.005376 ms
+Total CPU time: 1034 ms
+Custom Kernel Time for img2colv2 conv: 1037.967407 ms
+Custom Kernel Time for cudnn conv: 84.949150 ms
+Running convMain with size 8192 and 1 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 257 gridy:257
+Memory allocation and padding time: 1894.62 ms
+Kernel data copy time: 0.05648 ms
+Convolution computation time: 7.09754 ms
+Result copy back to host time: 28.1049 ms
+Custom Kernel Time for sliding conv: 1933.456299 ms
+
+GPU memory allocation and copy time: 80.574432 ms
+GPU im2col_gpu time: 9.207424 ms
+GPU cublas handle malloc time: 999.699524 ms
+GPU cublasSgemm time: 8.879104 ms
+GPU result copy back to host time: 27.895264 ms
+Total CPU time: 1127 ms
+Custom Kernel Time for img2colv2 conv: 1135.358765 ms
+Custom Kernel Time for cudnn conv: 257.608917 ms
+End of convMain with 1 stride
+
+Running convMain with size 512 and 2 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 17 gridy:17
+Memory allocation and padding time: 7.76595 ms
+Kernel data copy time: 0.034656 ms
+Convolution computation time: 5.18349 ms
+Result copy back to host time: 0.054592 ms
+Custom Kernel Time for sliding conv: 13.258816 ms
+
+GPU memory allocation and copy time: 0.541952 ms
+GPU im2col_gpu time: 0.027264 ms
+GPU cublas handle malloc time: 1009.995789 ms
+GPU cublasSgemm time: 0.529408 ms
+GPU result copy back to host time: 0.057664 ms
+Total CPU time: 1011 ms
+Custom Kernel Time for img2colv2 conv: 1011.653015 ms
+Custom Kernel Time for cudnn conv: 28.787041 ms
+Running convMain with size 1024 and 2 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 33 gridy:33
+Memory allocation and padding time: 30.1922 ms
+Kernel data copy time: 0.037472 ms
+Convolution computation time: 5.13331 ms
+Result copy back to host time: 0.197568 ms
+Custom Kernel Time for sliding conv: 35.839039 ms
+
+GPU memory allocation and copy time: 1.498432 ms
+GPU im2col_gpu time: 0.037376 ms
+GPU cublas handle malloc time: 1005.683411 ms
+GPU cublasSgemm time: 0.645120 ms
+GPU result copy back to host time: 0.187648 ms
+Total CPU time: 1008 ms
+Custom Kernel Time for img2colv2 conv: 1008.888733 ms
+Custom Kernel Time for cudnn conv: 30.879648 ms
+Running convMain with size 2048 and 2 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 65 gridy:65
+Memory allocation and padding time: 119.474 ms
+Kernel data copy time: 0.038336 ms
+Convolution computation time: 5.2929 ms
+Result copy back to host time: 0.52352 ms
+Custom Kernel Time for sliding conv: 126.016579 ms
+
+GPU memory allocation and copy time: 5.365056 ms
+GPU im2col_gpu time: 0.164384 ms
+GPU cublas handle malloc time: 1023.984619 ms
+GPU cublasSgemm time: 0.750400 ms
+GPU result copy back to host time: 0.560032 ms
+Total CPU time: 1031 ms
+Custom Kernel Time for img2colv2 conv: 1033.571167 ms
+Custom Kernel Time for cudnn conv: 35.852638 ms
+Running convMain with size 4096 and 2 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 129 gridy:129
+Memory allocation and padding time: 472.661 ms
+Kernel data copy time: 0.039136 ms
+Convolution computation time: 5.68422 ms
+Result copy back to host time: 1.89619 ms
+Custom Kernel Time for sliding conv: 481.270782 ms
+
+GPU memory allocation and copy time: 20.148001 ms
+GPU im2col_gpu time: 0.717600 ms
+GPU cublas handle malloc time: 1031.207886 ms
+GPU cublasSgemm time: 1.183872 ms
+GPU result copy back to host time: 1.823616 ms
+Total CPU time: 1055 ms
+Custom Kernel Time for img2colv2 conv: 1058.150757 ms
+Custom Kernel Time for cudnn conv: 55.013920 ms
+Running convMain with size 8192 and 2 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 257 gridy:257
+Memory allocation and padding time: 1909.02 ms
+Kernel data copy time: 0.056384 ms
+Convolution computation time: 7.14867 ms
+Result copy back to host time: 7.04864 ms
+Custom Kernel Time for sliding conv: 1925.790771 ms
+
+GPU memory allocation and copy time: 77.757889 ms
+GPU im2col_gpu time: 2.926752 ms
+GPU cublas handle malloc time: 1020.901367 ms
+GPU cublasSgemm time: 2.728960 ms
+GPU result copy back to host time: 6.981376 ms
+Total CPU time: 1112 ms
+Custom Kernel Time for img2colv2 conv: 1115.605835 ms
+Custom Kernel Time for cudnn conv: 133.214905 ms
+End of convMain with 2 stride
+
+Running convMain with size 512 and 3 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 17 gridy:17
+Memory allocation and padding time: 7.75437 ms
+Kernel data copy time: 0.026976 ms
+Convolution computation time: 5.14662 ms
+Result copy back to host time: 0.032512 ms
+Custom Kernel Time for sliding conv: 13.239328 ms
+
+GPU memory allocation and copy time: 0.517280 ms
+GPU im2col_gpu time: 0.019872 ms
+GPU cublas handle malloc time: 1025.156128 ms
+GPU cublasSgemm time: 0.578560 ms
+GPU result copy back to host time: 0.038368 ms
+Total CPU time: 1026 ms
+Custom Kernel Time for img2colv2 conv: 1026.684692 ms
+Custom Kernel Time for cudnn conv: 29.669344 ms
+Running convMain with size 1024 and 3 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 33 gridy:33
+Memory allocation and padding time: 30.3055 ms
+Kernel data copy time: 0.035232 ms
+Convolution computation time: 5.17939 ms
+Result copy back to host time: 0.099456 ms
+Custom Kernel Time for sliding conv: 35.874207 ms
+
+GPU memory allocation and copy time: 1.562848 ms
+GPU im2col_gpu time: 0.032160 ms
+GPU cublas handle malloc time: 1024.646118 ms
+GPU cublasSgemm time: 0.621568 ms
+GPU result copy back to host time: 0.092704 ms
+Total CPU time: 1027 ms
+Custom Kernel Time for img2colv2 conv: 1027.526123 ms
+Custom Kernel Time for cudnn conv: 28.267744 ms
+Running convMain with size 2048 and 3 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 65 gridy:65
+Memory allocation and padding time: 118.559 ms
+Kernel data copy time: 0.03696 ms
+Convolution computation time: 5.28282 ms
+Result copy back to host time: 0.224 ms
+Custom Kernel Time for sliding conv: 124.411102 ms
+
+GPU memory allocation and copy time: 5.215936 ms
+GPU im2col_gpu time: 0.082272 ms
+GPU cublas handle malloc time: 1038.520264 ms
+GPU cublasSgemm time: 0.674816 ms
+GPU result copy back to host time: 0.256128 ms
+Total CPU time: 1044 ms
+Custom Kernel Time for img2colv2 conv: 1046.154297 ms
+Custom Kernel Time for cudnn conv: 34.070400 ms
+Running convMain with size 4096 and 3 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 129 gridy:129
+Memory allocation and padding time: 472.958 ms
+Kernel data copy time: 0.0896 ms
+Convolution computation time: 5.48358 ms
+Result copy back to host time: 0.908704 ms
+Custom Kernel Time for sliding conv: 480.267456 ms
+
+GPU memory allocation and copy time: 19.424864 ms
+GPU im2col_gpu time: 0.423744 ms
+GPU cublas handle malloc time: 1002.050781 ms
+GPU cublasSgemm time: 0.885600 ms
+GPU result copy back to host time: 0.881344 ms
+Total CPU time: 1024 ms
+Custom Kernel Time for img2colv2 conv: 1026.536499 ms
+Custom Kernel Time for cudnn conv: 48.549057 ms
+Running convMain with size 8192 and 3 stride
+argc: 8
+blockx: 32 blocky: 32 gridx: 257 gridy:257
+Memory allocation and padding time: 1888.58 ms
+Kernel data copy time: 0.055232 ms
+Convolution computation time: 6.41638 ms
+Result copy back to host time: 3.23149 ms
+Custom Kernel Time for sliding conv: 1900.131592 ms
+
+GPU memory allocation and copy time: 78.880257 ms
+GPU im2col_gpu time: 1.756928 ms
+GPU cublas handle malloc time: 1002.224426 ms
+GPU cublasSgemm time: 1.598464 ms
+GPU result copy back to host time: 3.223168 ms
+Total CPU time: 1088 ms
+Custom Kernel Time for img2colv2 conv: 1092.375122 ms
+Custom Kernel Time for cudnn conv: 110.771553 ms
+End of convMain with 3 stride
+
+End of convMain
+

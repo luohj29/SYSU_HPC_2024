@@ -39,7 +39,7 @@ int PthreadPool::Init(unsigned int num)
         threads = new pthread_t[num];
 
         // 创建线程
-        for (int i = 0; i < num; i++)
+        for (unsigned int i = 0; i < num; i++)
         {
             if (pthread_create(threads + i, NULL, threadpool_thread, (void *)this) != 0)
             {
@@ -108,7 +108,6 @@ int PthreadPool::AddTask(void* (*function)(void *), void *argument)
     // 加入队列
 
     thread_queue.push(newRunable);
-    this->waiting_num++;
     this->unfinished_task++;
  
     // 发出signal
@@ -156,8 +155,6 @@ void *PthreadPool::threadpool_thread(void *threadpool)
             pool->thread_queue.pop(); // 出队
         }
 
-        // running_num
-        pool->waiting_num--;
 
         /* 释放互斥锁 */
         pthread_mutex_unlock(&(pool->lock));

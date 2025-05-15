@@ -3,8 +3,6 @@
 # include <stdio.h>
 # include <math.h>
 # include <omp.h>
-#include <time.h>
-#include <sys/time.h>
 extern int parallel_for(struct index *index_in, void *(*functor)(void*), void *arg , int num_threads);
 pthread_mutex_t shared_var;
 
@@ -116,8 +114,6 @@ int main ( int argc, char *argv[] )
   M = atoi(argv[1]);
   N = atoi(argv[2]);
 int threads_num = atoi(argv[3]);
-struct timeval start_time;
-struct timeval end_time;
 double diff;
 double epsilon = 0.001;
 int i;
@@ -125,7 +121,6 @@ int iterations;
 int iterations_print;
 int j;
 double mean;
-double my_diff;
 // 动态分配二维数组 u 和 w
 double **u = new double *[M]; // 为行分配内存
 double **w = new double *[M]; // 为行分配内存
@@ -208,8 +203,7 @@ for (int i = 0; i < M; ++i)
   struct index index_diy = {1, M - 1, 1, 1, N - 1, 1};
   struct value2matrix value2matrix_diy = {mean,w};
     // printf("%p\n", w);
-    // printf("%.4lf\n", w[50][50]);\
-    threadspool.Init(16);
+    // printf("%.4lf\n", w[50][50]);
   parallel_for(&threadspool, &index_diy, value_map_matrix, (void *)&value2matrix_diy, num_threads);
 //   iterate until the  new solution W differs from the old solution U
 //   by no more than EPSILON.

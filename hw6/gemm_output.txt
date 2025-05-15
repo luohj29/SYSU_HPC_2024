@@ -1,0 +1,159 @@
+
+Running gemmMain with size 512 and 8 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.119276 ms	Performance: 2250.540355 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.058392 ms	Performance: 4597.127321 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.618059 ms	Performance: 434.320129 GFLOPS
+Running gemmMain with size 1024 and 8 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.613938 ms	Performance: 3497.883726 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.346946 ms	Performance: 6189.676899 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.684992 ms	Performance: 3135.049168 GFLOPS
+Running gemmMain with size 2048 and 8 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 4.252828 ms	Performance: 4039.634026 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 2.613971 ms	Performance: 6572.325866 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.907362 ms	Performance: 18933.864855 GFLOPS
+Running gemmMain with size 4096 and 8 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 40.205784 ms	Performance: 3418.387613 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 20.639482 ms	Performance: 6659.030985 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 3.348084 ms	Performance: 41050.031774 GFLOPS
+Running gemmMain with size 8192 and 8 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 1086.576660 ms	Performance: 1011.904330 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 155.741180 ms	Performance: 7059.864480 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 19.039452 ms	Performance: 57749.122765 GFLOPS
+End of gemmMain with 8 BLOCK SIZE
+
+Running gemmMain with size 512 and 16 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.139026 ms	Performance: 1930.829153 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.055213 ms	Performance: 4861.816111 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.577676 ms	Performance: 464.681685 GFLOPS
+Running gemmMain with size 1024 and 16 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.474371 ms	Performance: 4527.013056 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.315404 ms	Performance: 6808.676055 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.612627 ms	Performance: 3505.368756 GFLOPS
+Running gemmMain with size 2048 and 16 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 3.434654 ms	Performance: 5001.921357 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 2.366526 ms	Performance: 7259.531479 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.866619 ms	Performance: 19824.016511 GFLOPS
+Running gemmMain with size 4096 and 16 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 26.978256 ms	Performance: 5094.434285 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 18.670843 ms	Performance: 7361.154103 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 3.302097 ms	Performance: 41621.717973 GFLOPS
+Running gemmMain with size 8192 and 16 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 303.584137 ms	Performance: 3621.769038 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 144.123398 ms	Performance: 7628.959935 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 18.969631 ms	Performance: 57961.676559 GFLOPS
+End of gemmMain with 16 BLOCK SIZE
+
+Running gemmMain with size 512 and 32 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.094635 ms	Performance: 2836.534574 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.055673 ms	Performance: 4821.645296 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.605556 ms	Performance: 443.287575 GFLOPS
+Running gemmMain with size 1024 and 32 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 0.472721 ms	Performance: 4542.814050 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 0.352395 ms	Performance: 6093.967451 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.670269 ms	Performance: 3203.913068 GFLOPS
+Running gemmMain with size 2048 and 32 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 3.422869 ms	Performance: 5019.143108 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 2.701448 ms	Performance: 6359.504020 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 0.870248 ms	Performance: 19741.348208 GFLOPS
+Running gemmMain with size 4096 and 32 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 26.978540 ms	Performance: 5094.380620 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 23.204506 ms	Performance: 5922.942464 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 3.343665 ms	Performance: 41104.284734 GFLOPS
+Running gemmMain with size 8192 and 32 BLOCK
+
+Testting the diy_cuda_global_mem implementation of matrix multiply
+Custom Kernel Time: 252.037506 ms	Performance: 4362.492094 GFLOPS
+
+Testting the diy_cuda_shared_mem implementation of matrix multiply
+Custom Kernel Time: 188.439362 ms	Performance: 5834.829935 GFLOPS
+
+Testting the cublas implementation of matrix multiply
+cuBLAS Time: 19.023041 ms	Performance: 57798.941872 GFLOPS
+End of gemmMain with 32 BLOCK SIZE
+
+End of gemmMain
+
